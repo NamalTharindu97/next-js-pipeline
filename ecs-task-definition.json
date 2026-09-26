@@ -8,14 +8,22 @@
   "containerDefinitions": [
     {
       "name": "next-js-pipeline",
-      "image": "661609780698.dkr.ecr.us-east-1.amazonaws.com/next-js-pipeline:latest",
+      "image": "661609780698.dkr.ecr.us-east-1.amazonaws.com/next-js-pipeline@sha256:a1be2c677c325b7fc1088ba99a4bf6b1a874c5b622fc16324c3c8aba4b1ae983",
       "essential": true,
       "portMappings": [
         {
           "containerPort": 3000,
           "protocol": "tcp"
         }
-      ]
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/next-js-pipeline",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
     }
   ]
 }
