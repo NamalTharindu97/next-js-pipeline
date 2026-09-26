@@ -1,0 +1,21 @@
+{
+  "family": "next-js-pipeline",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::661609780698:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "next-js-pipeline",
+      "image": "661609780698.dkr.ecr.us-east-1.amazonaws.com/next-js-pipeline:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
