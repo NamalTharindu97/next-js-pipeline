@@ -34,3 +34,6 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Build Docker image
+        run: docker build --platform linux/amd64 -t next-js-pipeline:ci .

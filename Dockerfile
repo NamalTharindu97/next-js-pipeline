@@ -23,6 +23,8 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+RUN rm -rf /usr/local/lib/node_modules/npm /opt/yarn-v1.22.22
+
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
