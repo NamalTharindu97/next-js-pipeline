@@ -12,7 +12,7 @@
           "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
         },
         "StringLike": {
-          "token.actions.githubusercontent.com:sub": "repo:NamalTharindu97/next-js-pipeline:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub": "repo:NamalTharindu97@102250138/next-js-pipeline@1385229544:ref:refs/heads/main"
         }
       }
     }
