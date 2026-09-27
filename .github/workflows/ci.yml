@@ -26,6 +26,9 @@ jobs:
       - name: Security audit
         run: npm audit --audit-level=high
 
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+
       - name: Lint
         run: npm run lint
 
