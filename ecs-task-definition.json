@@ -1,21 +1,28 @@
 {
   "family": "next-js-pipeline",
   "networkMode": "awsvpc",
-  "requiresCompatibilities": ["FARGATE"],
+  "executionRoleArn": "arn:aws:iam::661609780698:role/ecsTaskExecutionRole",
   "cpu": "256",
   "memory": "512",
-  "executionRoleArn": "arn:aws:iam::661609780698:role/ecsTaskExecutionRole",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
   "containerDefinitions": [
     {
       "name": "next-js-pipeline",
-      "image": "661609780698.dkr.ecr.us-east-1.amazonaws.com/next-js-pipeline@sha256:a1be2c677c325b7fc1088ba99a4bf6b1a874c5b622fc16324c3c8aba4b1ae983",
-      "essential": true,
+      "image": "PLACEHOLDER",
+      "cpu": 0,
       "portMappings": [
         {
           "containerPort": 3000,
+          "hostPort": 3000,
           "protocol": "tcp"
         }
       ],
+      "essential": true,
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
