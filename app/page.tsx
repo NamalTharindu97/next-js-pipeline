@@ -4,7 +4,7 @@ export default function Home() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="mb-12">
           <p className="mb-3 text-sm font-medium text-cyan-400">
-            Hello AWS DevSecOps Project
+            Hello Hello AWS DevSecOps Project
           </p>
 
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
